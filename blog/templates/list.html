@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<head>
+	<title>List</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+	{% for post in post%} 
+	Title: <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+	 <a href = "{% url 'post_delete' post.pk %}">Delete</a>
+	 {% endfor %}
+	</table>
+</body>
+</html>
